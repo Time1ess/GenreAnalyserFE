@@ -1,0 +1,6 @@
+#waveformDiv { height: 80%; }
+mat-toolbar { height: 20%; }
+
+.controls {
+  justify-content: center;
+}
