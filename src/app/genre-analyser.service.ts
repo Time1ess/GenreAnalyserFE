@@ -1,7 +1,7 @@
 import { ElementRef, Injectable } from '@angular/core';
 import { ReplaySubject, timer } from 'rxjs';
 
-import * as WaveSurfer from 'waveSurfer.js';
+import * as WaveSurfer from 'wavesurfer.js';
 
 const fftSize = 256;
 

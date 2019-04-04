@@ -1,7 +1,7 @@
 <div id="waveformDiv" #waveformDiv></div>
 <ng-container *ngIf="analyserService.waveSurfer">
   <mat-toolbar class="controls">
-    <button mat-button (click)="skipBackward()"><mat-icon>fast_rewind</mat-icon></button>
+    <button mat-button (click)="analyserService.waveSurfer.skipBackward()"><mat-icon>fast_rewind</mat-icon></button>
     <button mat-button (click)="analyserService.waveSurfer.playPause()">
       <mat-icon *ngIf="!analyserService.waveSurfer.isPlaying(); else pauseIcon">play_arrow</mat-icon>
       <ng-template #pauseIcon>
