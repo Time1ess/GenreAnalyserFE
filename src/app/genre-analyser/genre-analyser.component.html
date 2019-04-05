@@ -8,7 +8,7 @@
   <audio hidden id="audioPlayer" #audioPlayer></audio>
 </div>
 <div class="mt-1">
-  <mat-grid-list cols="2" rowHeight="4:1">
+  <mat-grid-list cols="2" rowHeight="3:1">
     <mat-grid-tile>
       <app-waveform-visualizer></app-waveform-visualizer>
     </mat-grid-tile>
@@ -16,4 +16,5 @@
       <app-frequency-visualizer></app-frequency-visualizer>
     </mat-grid-tile>
   </mat-grid-list>
+  <h1>该歌曲的名字：{{analyserService.audioName}}</h1>
 </div>
