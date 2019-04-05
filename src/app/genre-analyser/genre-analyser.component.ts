@@ -29,6 +29,7 @@ export class GenreAnalyserComponent implements OnInit, AfterViewInit {
     const player = this.audioPlayer.nativeElement;
     player.src = audioURL;
     player.load();
+    //获取音频文件的名字
     this.analyserService.audioName = this.audioFile.nativeElement.files[0].name;
     this.analyserService.audioChange.next();
   }
