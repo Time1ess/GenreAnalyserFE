@@ -42,9 +42,14 @@ export class GenreAnalyserService {
         container: container,
         // container: #wave
         //可以是唯一css3选择器 也可以是dom元素
-        waveColor: 'violet',//紫罗兰
+
+        //TODO 下面两个颜色需要修改 觉得有点不好看
+        //https://wenku.baidu.com/view/5f5bcdd233d4b14e852468d6.html
+        // 颜色相关资料从这里看
+        waveColor: 'cyan',
         // waveColor: 'white',
-        progressColor: 'blue',
+        progressColor: 'royalblue',
+
         // progressColor: 'rgb(4, 44, 138)',
         minPxPerSec: 1,//每秒音频的最小像素数。
         normalize: true,//通过最大峰值 而不是1.0标准化

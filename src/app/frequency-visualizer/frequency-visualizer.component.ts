@@ -62,16 +62,57 @@ export class FrequencyVisualizerComponent implements OnInit, AfterViewInit, OnDe
 
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, width, height);
-
+    //打印一些参数
+    // console.log(bufferLength); 都是128
     let x = 0;
+    // 好看的紫色
+    let r = 255;//160
+    let g = 215;//32
+    let b = 0;//240
+    // let rgb = 2
+    // alert(bufferLength); 128个
     analyser.getByteFrequencyData(dataArray);
     for (let i = 0; i < bufferLength; i++) {
       const fillPercentage = dataArray[i] / 255;
       const barHeight = height * fillPercentage;
 
-      const r = 255;
-      const g = 255;
-      const b = 255;
+      //TODO 设置成彩色的频谱图 一种方法是在0到255之间 随机取一个整数
+      // 全白色
+      // const r = 255;
+      // const g = 255;
+      // const b = 255;
+
+      // 每条颜色不同时间不一样 最乱
+      // const r = Math.floor(Math.random() * 256);
+      // const g = Math.floor(Math.random() * 256);
+      // const b = Math.floor(Math.random() * 256);
+
+      // 不同条的颜色不一样
+      // if(r<0){
+      //   r = 255;
+      // }
+      // else if(r>255)
+      // {
+      //   r = 0;
+      // }
+      // if(g<0){
+      //   g = 255;
+      // }
+      // else if(g>255)
+      // {
+      //   g = 0;
+      // }
+      // if(b<0){
+      //   b = 255;
+      // }
+      // else if(b>255)
+      // {
+      //   b = 0;
+      // }
+      r -= 2;
+      g -= 2;
+      b -= 2;
+
 
       ctx.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
       ctx.fillRect(x + barSpan / 2, height - barHeight,
